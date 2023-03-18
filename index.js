@@ -12,7 +12,7 @@ let sexoconf1 = false;
 let km = 0;
 let verificacion1;
 let anadirpersona;
-//const arrayParticipantes;
+const arrayParticipantes = [];
 
 
 // participante 2
@@ -37,7 +37,7 @@ function participante1(){
         ), 
     }
 
-   const arrayParticipantes = [persona1];
+   arrayParticipantes.push(persona1);
 }
 
 
@@ -103,7 +103,8 @@ if (persona1.edad < 10 || persona1.edad > 85) {
     Apellido: ${persona1.apellido}
     DNI: ${persona1.dni}
     Edad: ${persona1.edad}
-    Sexo: ${persona1.sexo}`
+    Sexo: ${persona1.sexo}
+    Kilometraje: ${persona1.km}km`
     );
 
     verificacion1 = prompt("Ingrese SI o NO:");
@@ -371,9 +372,9 @@ function categoriaSimple(){
 
 
 // Se busca la categoria en el caso de que sea dupla
-function sumaEdades(arrayParticipantes){
+function sumaEdades(){
 
-    const resultado = arrayParticipantes[0].edad + arrayParticipantes[1].edad;
+    const resultado = (arrayParticipantes[0].edad + arrayParticipantes[1].edad);
 
     return resultado;
 
